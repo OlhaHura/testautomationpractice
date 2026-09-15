@@ -11,7 +11,7 @@ test.describe('Home page', () => {
     test.beforeEach(async ({ page }) => {
         homePage = new HomePage(page)
         menu = new MenuComponent(page)
-        await homePage.visit()
+        await homePage.openWeb()
     })
 
 

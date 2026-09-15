@@ -11,7 +11,7 @@ test.describe.parallel('PlaywrightPractice page', () => {
     test.beforeEach(async ({ page }) => {
         menu = new MenuComponent(page)
         practicePage = new PlaywrightPracticePage(page)
-        await practicePage.visit()
+        await practicePage.openWeb()
         await menu.clickOnTab('PlaywrightPractice')
     })
 
