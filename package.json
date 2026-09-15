@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tests:chrome": "playwright test --config=e2e.config.ts --project=chromium",
-    "tests:firefox": "playwright test --config=e2e.config.ts --project=firefox",
-    "tests:webkit": "playwright test --config=e2e.config.ts --project=webkit",
-    "tests:headed": "playwright test --config=e2e.config.ts --project=chromium --headed",
+    "tests:chrome": "playwright test --config=playwright.config.ts --project=chromium",
+    "tests:firefox": "playwright test --config=e2e.playwright.ts --project=firefox",
+    "tests:webkit": "playwright test --config=e2e.playwright.ts --project=webkit",
+    "tests:headed": "playwright test --config=e2e.playwright.ts --project=chromium --headed",
     "tests:api": "playwright test --config=api.config.ts --project=chromium"
   },
   "keywords": [],
