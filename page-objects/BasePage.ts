@@ -17,6 +17,7 @@ export class BasePage {
 
   async waitForPageLoaded() {
     await this.page.waitForLoadState('domcontentloaded')
+    await this.page.waitForTimeout(1000) // Wait for 1 second to ensure the page is fully loaded
   }
 
   async closeCookieAlert() {
