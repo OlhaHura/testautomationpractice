@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 import { MenuComponent } from '../../page-objects/components/MenuComponent';
 import { PlaywrightPracticePage } from '../../page-objects/PlaywrightPracticePage'
 
-test.describe('PlaywrightPractice page', () => {
+test.describe.parallel('PlaywrightPractice page', () => {
     let menu: MenuComponent
     let practicePage: PlaywrightPracticePage
 
