@@ -14,11 +14,11 @@ export class MenuComponent extends BasePage{
 
         const menu = page.locator('#PageList2')
 
-        this.home = menu.getByRole('link', { name: 'Home', exact: true })
-        this.udemyCourses = menu.getByRole('link', { name: 'Udemy Courses', exact: true })
-        this.onlineTrainings = menu.getByRole('link', { name: 'Online Trainings', exact: true })
-        this.blog = menu.getByRole('link', { name: 'Blog', exact: true })
-        this.playwrightpractice = menu.getByRole('link', { name: 'PlaywrightPractice', exact: true })
+        this.home = menu.locator('a', { hasText: 'Home' })
+        this.udemyCourses = menu.locator('a', { hasText: 'Udemy Courses' })
+        this.onlineTrainings = menu.locator('a', { hasText: 'Online Trainings' })
+        this.blog = menu.locator('a', { hasText: 'Blog' })
+        this.playwrightpractice = menu.locator('a', { hasText: 'PlaywrightPractice' })
 
     }
 
