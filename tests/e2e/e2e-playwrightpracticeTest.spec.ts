@@ -33,20 +33,11 @@ test.describe.parallel('PlaywrightPractice page', () => {
         await expect(practicePage.btn_toggleButton).toBeVisible()
         await expect(practicePage.btn_toggleButton).toBeEnabled()
 
-        //check the color before hover
-        const colorBeforeHover = await practicePage.btn_toggleButton.evaluate(
-            (element) => getComputedStyle(element).backgroundColor
-        )
-
         //hover over the button
         await practicePage.btn_toggleButton.hover()
 
-        //check the color after hover
-        const colorAfterHover = await practicePage.btn_toggleButton.evaluate(
-            (element) => getComputedStyle(element).backgroundColor
-        )
-
-        expect(colorAfterHover).not.toBe(colorBeforeHover);
+        //verify the button is hovered
+        await expect(practicePage.btn_toggleButton).toHaveCSS('background-color', 'rgb(128, 128, 128)')
     })
 
 
