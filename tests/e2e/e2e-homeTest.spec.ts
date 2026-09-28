@@ -27,11 +27,21 @@ test.describe('Home page', () => {
     })
 
 
-    test('Test 20:Type random name and email into the Data Entry Form', async () => {
+    test('Test 20: Type random name and email into the Data Entry Form', async () => {
         await homePage.fillDataEntryForm(randomName, randomEmail)
 
         await expect(homePage.nameInput).toHaveValue(randomName)
         await expect(homePage.emailInput).toHaveValue(randomEmail)
+    })
+
+
+    test('Test 30: Dynamic Button', async () => {
+        await homePage.btn_dynamicStart.click()
+        await expect(homePage.btn_dynamicStop).toBeVisible()
+
+        await homePage.btn_dynamicStop.click()
+        await expect(homePage.btn_dynamicStart).toBeVisible()
+
     })
 
 })
