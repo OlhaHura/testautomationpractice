@@ -19,4 +19,15 @@ export class DropdownComponent extends BasePage {
     async selectByLabel(dropdown: Locator, label: string) {
         await dropdown.selectOption({ label })
     }
+
+    async selectByText(options: Locator, label: string) {
+        const option = options.filter({ hasText: new RegExp(`^${label}$`) })
+        await option.scrollIntoViewIfNeeded()
+        await option.click()
+    }
+
+    randomItem(from: number, to: number): string {
+        const itemNumber = Math.floor(Math.random() * (to - from + 1)) + from
+        return `Item ${itemNumber}`
+    }
 }
