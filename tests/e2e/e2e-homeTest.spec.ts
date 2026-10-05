@@ -1,10 +1,12 @@
 import { expect, test } from '@playwright/test'
 import { HomePage } from '../../page-objects/HomePage'
 import { MenuComponent } from '../../page-objects/components/MenuComponent';
+import { DropdownComponent } from '../../page-objects/components/DropdownComponent';
 
 test.describe('Home page', () => {
     let homePage: HomePage
     let menu: MenuComponent
+    let dropdown: DropdownComponent
 
     const randomString = (length: number): string =>
         Math.random().toString(36).substring(2, 2 + length)
@@ -17,6 +19,7 @@ test.describe('Home page', () => {
     test.beforeEach(async ({ page }) => {
         homePage = new HomePage(page)
         menu = new MenuComponent(page)
+        dropdown = new DropdownComponent(page)
         await homePage.openWeb()
     })
 
@@ -42,6 +45,15 @@ test.describe('Home page', () => {
         await homePage.btn_dynamicStop.click()
         await expect(homePage.btn_dynamicStart).toBeVisible()
 
+    })
+
+
+    test('Test 40: Select Japan from the Country drop-down', async () => {
+        await dropdown.scrollTo(homePage.countryDropdown)
+        await dropdown.open(homePage.countryDropdown)
+        await dropdown.selectByLabel(homePage.countryDropdown, 'Japan')
+
+        await expect(homePage.countryDropdown).toHaveValue('japan')
     })
 
 })

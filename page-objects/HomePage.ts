@@ -7,6 +7,7 @@ export class HomePage extends BasePage {
     readonly emailInput: Locator
     readonly btn_dynamicStart: Locator
     readonly btn_dynamicStop: Locator
+    readonly countryDropdown: Locator
 
     constructor(page: Page) {
         super(page);
@@ -15,6 +16,7 @@ export class HomePage extends BasePage {
         this.emailInput = page.locator('#email')
         this.btn_dynamicStart = page.locator('.start')
         this.btn_dynamicStop = page.locator('.stop')
+        this.countryDropdown = page.locator('#country')
     }
 
     async fillDataEntryForm(name: string, email: string) {
