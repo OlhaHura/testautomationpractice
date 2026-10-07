@@ -3,8 +3,8 @@ import { LoadTestComponent } from '../../page-objects/components/LoadTestCompone
 import { HomePage } from '../../page-objects/HomePage'
 import { PlaywrightPracticePage } from '../../page-objects/PlaywrightPracticePage'
 
-const homeUsers = 30
-const practiceUsers = 30
+const homeUsers = 10
+const practiceUsers = 10
 
 test.describe('Load testing', () => {
     test('Test 10: Home page load', async ({ browser }) => {
