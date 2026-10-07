@@ -22,27 +22,27 @@ export class MenuComponent extends BasePage{
 
     }
 
+    async openTab(tab: Locator) {
+        await tab.click()
+        await this.waitForPageLoaded()
+    }
+
     async clickOnTab(tabName: string) {
         switch (tabName) {
             case 'Home':
-                await this.home.click()
-                await this.waitForPageLoaded()
+                await this.openTab(this.home)
                 break
             case 'Udemy Courses':
-                await this.udemyCourses.click()
-                await this.waitForPageLoaded()
+                await this.openTab(this.udemyCourses)
                 break
             case 'Online Trainings':
-                await this.onlineTrainings.click()
-                await this.waitForPageLoaded()
+                await this.openTab(this.onlineTrainings)
                 break
             case 'Blog':
-                await this.blog.click()
-                await this.waitForPageLoaded()
+                await this.openTab(this.blog)
                 break
             case 'PlaywrightPractice':
-                await this.playwrightpractice.click()
-                await this.waitForPageLoaded()
+                await this.openTab(this.playwrightpractice)
                 break
             default:
                 throw new Error(`This tab does not exist: ${tabName}`)

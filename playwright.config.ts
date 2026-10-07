@@ -48,5 +48,16 @@ export default defineConfig({
                 baseURL: 'https://api.restful-api.dev',
             },
         },
+
+        {
+            name: 'Performance',
+            testDir: './tests/performance',
+            timeout: 60_000,
+
+            use: {
+                ...devices['Desktop Chrome'],
+                baseURL: 'https://testautomationpractice.blogspot.com',
+            },
+        },
     ],
 });

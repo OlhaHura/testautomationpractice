@@ -6,7 +6,8 @@
   "scripts": {
     "tests:ui": "playwright test --config=playwright.config.ts --project=UI",
     "tests:headed": "playwright test --config=playwright.config.ts --project=UI --headed",
-    "tests:api": "playwright test --config=playwright.config.ts --project=API"
+    "tests:api": "playwright test --config=playwright.config.ts --project=API",
+    "tests:performance": "playwright test --config=playwright.config.ts --project=Performance"
   },
   "keywords": [],
   "author": "",
