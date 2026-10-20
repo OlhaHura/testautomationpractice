@@ -58,6 +58,17 @@ Each test starts on the Home page.
 
 **Expected result:** The **Country** drop-down value is `japan`.
 
+### Test 50: Select Wireless Mouse 20 in the Pagination Web Table
+
+| Step | Action |
+| --- | --- |
+| 1 | Open the Home page. |
+| 2 | Scroll to the **Pagination Web Table**. |
+| 3 | Click page **1**, then **2**, then **3**, then **4**. |
+| 4 | Select **Wireless Mouse 20**. |
+
+**Expected result:** The checkbox for **Wireless Mouse 20** is selected.
+
 ## UI: PlaywrightPractice page
 
 File: `tests/e2e/e2e-playwrightpracticeTest.spec.ts`

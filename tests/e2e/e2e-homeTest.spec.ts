@@ -56,4 +56,18 @@ test.describe('Home page', () => {
         await expect(homePage.countryDropdown).toHaveValue('japan')
     })
 
+
+    test('Test 50: Select Wireless Mouse 20 in the Pagination Web Table', async () => {
+        await homePage.paginationSection.scrollIntoViewIfNeeded()
+
+        for (const pageNumber of [1, 2, 3, 4]) {
+            await homePage.openPaginationPage(pageNumber)
+        }
+
+        const wirelessMouse = homePage.productCheckbox('Wireless Mouse 20')
+        await wirelessMouse.check()
+
+        await expect(wirelessMouse).toBeChecked()
+    })
+
 })
