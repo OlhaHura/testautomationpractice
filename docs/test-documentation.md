@@ -124,6 +124,65 @@ Each test starts by opening the site and clicking **PlaywrightPractice** in the 
 
 **Expected result:** The Scrolling DropDown field shows the selected item, for example `Item 42`.
 
+## UI: Hidden Elements & AJAX page
+
+File: `tests/e2e/e2e-hiddenElementsTest.spec.ts`
+
+Page: [Hidden Elements & AJAX](https://testautomationpractice.blogspot.com/p/gui-elements-ajax-hidden.html)
+
+Each test starts by opening the site and clicking **Hidden Elements & AJAX** in the footer menu.
+
+### Test 10: Show Input Box 2
+
+| Step | Action |
+| --- | --- |
+| 1 | Open the Hidden Elements & AJAX page. |
+| 2 | Check **Input Box 2**. |
+| 3 | Click **Toggle Input Box 2**. |
+
+**Expected result:** **Input Box 2** is not visible before the click. After the click, **Input Box 2** is visible.
+
+### Test 20: Hide Input Box 2
+
+| Step | Action |
+| --- | --- |
+| 1 | Open the Hidden Elements & AJAX page. |
+| 2 | Check **Input Box 2**. |
+| 3 | Click **Toggle Input Box 2**. |
+| 4 | Click **Toggle Input Box 2** again. |
+
+**Expected result:** **Input Box 2** is not visible at the start, visible after the first click, and not visible after the second click.
+
+### Test 30: Show Checkbox 2
+
+| Step | Action |
+| --- | --- |
+| 1 | Open the Hidden Elements & AJAX page. |
+| 2 | Check **Checkbox 2**. |
+| 3 | Click **Toggle Checkbox 2**. |
+
+**Expected result:** **Checkbox 2** is not visible before the click. After the click, **Checkbox 2** is visible.
+
+### Test 40: Hide Checkbox 2
+
+| Step | Action |
+| --- | --- |
+| 1 | Open the Hidden Elements & AJAX page. |
+| 2 | Check **Checkbox 2**. |
+| 3 | Click **Toggle Checkbox 2**. |
+| 4 | Click **Toggle Checkbox 2** again. |
+
+**Expected result:** **Checkbox 2** is not visible at the start, visible after the first click, and not visible after the second click.
+
+### Test 50: Load AJAX Content
+
+| Step | Action |
+| --- | --- |
+| 1 | Open the Hidden Elements & AJAX page. |
+| 2 | Click **Load AJAX Content**. |
+
+**Expected result:** The loaded content contains **AJAX Content Loaded** and **This is some dynamic content loaded through AJAX.**
+
 ## API
 
 File: `tests/api/apiTest.spec.ts`

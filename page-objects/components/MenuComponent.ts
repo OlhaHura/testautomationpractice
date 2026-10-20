@@ -8,17 +8,20 @@ export class MenuComponent extends BasePage{
     readonly onlineTrainings: Locator
     readonly blog: Locator
     readonly playwrightpractice: Locator
+    readonly hiddenElements: Locator
 
     constructor(page: Page) {
         super(page);
 
         const menu = page.locator('#PageList2')
+        const footerMenu = page.locator('#PageList1')
 
         this.home = menu.locator('a', { hasText: 'Home' })
         this.udemyCourses = menu.locator('a', { hasText: 'Udemy Courses' })
         this.onlineTrainings = menu.locator('a', { hasText: 'Online Trainings' })
         this.blog = menu.locator('a', { hasText: 'Blog' })
         this.playwrightpractice = menu.locator('a', { hasText: 'PlaywrightPractice' })
+        this.hiddenElements = footerMenu.locator('a', { hasText: 'Hidden Elements & AJAX' })
 
     }
 
@@ -43,6 +46,9 @@ export class MenuComponent extends BasePage{
                 break
             case 'PlaywrightPractice':
                 await this.openTab(this.playwrightpractice)
+                break
+            case 'Hidden Elements & AJAX':
+                await this.openTab(this.hiddenElements)
                 break
             default:
                 throw new Error(`This tab does not exist: ${tabName}`)
