@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test'
 
-test.describe.parallel('API testing', () => {
+test.describe.configure({ mode: 'parallel' })
+test.describe('API testing', () => {
 
     test('Test 10: GET Request', async ({ request }) => {
         const response = await request.get('/objects')

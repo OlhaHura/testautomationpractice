@@ -7,7 +7,9 @@ This document describes the automated test cases in this project. Each case list
 | Suite | Command | Application |
 | --- | --- | --- |
 | UI | `npm run tests:ui` | https://testautomationpractice.blogspot.com |
+| UI (visible)| `npm run tests:ui:headed` | https://testautomationpractice.blogspot.com |
 | UI on iPhone | `npm run tests:ui:iphone` | https://testautomationpractice.blogspot.com |
+| UI on iPhone (visible) | `npm run tests:ui:iphone:headed` | https://testautomationpractice.blogspot.com |
 | API | `npm run tests:api` | https://api.restful-api.dev |
 | Performance | `npm run tests:performance` | https://testautomationpractice.blogspot.com |
 

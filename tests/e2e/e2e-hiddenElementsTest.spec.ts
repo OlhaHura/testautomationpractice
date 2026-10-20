@@ -2,10 +2,11 @@ import { expect, test } from '@playwright/test'
 import { MenuComponent } from '../../page-objects/components/MenuComponent';
 import { HiddenElementsPage } from '../../page-objects/HiddenElementsPage'
 
+
+test.describe.configure({ mode: 'parallel' })
 test.describe('Hidden Elements & AJAX page', () => {
     let menu: MenuComponent
     let hiddenElementsPage: HiddenElementsPage
-
 
     //Before Hook
     test.beforeEach(async ({ page }) => {

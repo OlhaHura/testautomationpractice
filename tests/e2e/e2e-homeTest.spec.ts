@@ -3,6 +3,8 @@ import { HomePage } from '../../page-objects/HomePage'
 import { MenuComponent } from '../../page-objects/components/MenuComponent';
 import { DropdownComponent } from '../../page-objects/components/DropdownComponent';
 
+
+test.describe.configure({ mode: 'parallel' })
 test.describe('Home page', () => {
     let homePage: HomePage
     let menu: MenuComponent

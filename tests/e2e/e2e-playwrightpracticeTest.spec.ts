@@ -3,7 +3,9 @@ import { MenuComponent } from '../../page-objects/components/MenuComponent';
 import { DropdownComponent } from '../../page-objects/components/DropdownComponent';
 import { PlaywrightPracticePage } from '../../page-objects/PlaywrightPracticePage'
 
-test.describe.parallel('PlaywrightPractice page', () => {
+
+test.describe.configure({ mode: 'parallel' })
+test.describe('PlaywrightPractice page', () => {
     let menu: MenuComponent
     let dropdown: DropdownComponent
     let practicePage: PlaywrightPracticePage
@@ -20,14 +22,14 @@ test.describe.parallel('PlaywrightPractice page', () => {
     })
 
 
-    test('Test 10: Click Primary Action button', async ({ page }) => {
+    test('Test 10: Click Primary Action button', async () => {
         await expect(practicePage.btn_primatyAction).toBeVisible()
         await expect(practicePage.btn_primatyAction).toBeEnabled()
         await practicePage.btn_primatyAction.click()
     })
 
 
-    test('Test 20: Hover over the Toggle Button', async ({ page }) => {
+    test('Test 20: Hover over the Toggle Button', async () => {
         await expect(practicePage.btn_toggleButton).toBeVisible()
         await expect(practicePage.btn_toggleButton).toBeEnabled()
 
