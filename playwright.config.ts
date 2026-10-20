@@ -41,6 +41,16 @@ export default defineConfig({
         },
 
         {
+            name: 'iPhone',
+            testDir: './tests/e2e',
+
+            use: {
+                ...devices['iPhone 16 Pro'],
+                baseURL: 'https://testautomationpractice.blogspot.com',
+            },
+        },
+
+        {
             name: 'API',
             testDir: './tests/api',
 

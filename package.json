@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tests:ui": "playwright test --config=playwright.config.ts --project=UI",
+    "tests:ui:iphone": "playwright test --config=playwright.config.ts --project=iPhone",
     "tests:headed": "playwright test --config=playwright.config.ts --project=UI --headed",
     "tests:api": "playwright test --config=playwright.config.ts --project=API",
     "tests:performance": "playwright test --config=playwright.config.ts --project=Performance"

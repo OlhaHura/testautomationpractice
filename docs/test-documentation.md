@@ -7,10 +7,11 @@ This document describes the automated test cases in this project. Each case list
 | Suite | Command | Application |
 | --- | --- | --- |
 | UI | `npm run tests:ui` | https://testautomationpractice.blogspot.com |
+| UI on iPhone | `npm run tests:ui:iphone` | https://testautomationpractice.blogspot.com |
 | API | `npm run tests:api` | https://api.restful-api.dev |
 | Performance | `npm run tests:performance` | https://testautomationpractice.blogspot.com |
 
-UI tests run in Desktop Chrome. Opening the site also dismisses the cookie alert when it is shown.
+UI tests run in Desktop Chrome. The iPhone command runs the same UI tests with the iPhone 16 Pro profile. Opening the site also dismisses the cookie alert when it is shown.
 
 ## UI: Home page
 
@@ -82,7 +83,7 @@ Each test starts by opening the site and clicking **PlaywrightPractice** in the 
 | 1 | Open the site. |
 | 2 | Click **PlaywrightPractice** in the menu. |
 
-**Expected result:** The URL ends with `p/playwrightpractice.html`. The page title is **PlaywrightPractice**.
+**Expected result:** The URL path is `p/playwrightpractice.html`. On iPhone, Blogger may add `?m=1`. The page title is **PlaywrightPractice**.
 
 ### Test 20: Click Primary Action button
 
