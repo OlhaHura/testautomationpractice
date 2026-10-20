@@ -74,18 +74,9 @@ Each test starts on the Home page.
 
 File: `tests/e2e/e2e-playwrightpracticeTest.spec.ts`
 
-Each test starts by opening the site and clicking **PlaywrightPractice** in the menu.
+Each test opens the site, clicks **PlaywrightPractice** in the menu, and checks that the page title is **PlaywrightPractice**.
 
-### Test 10: Open PlaywrightPractice page
-
-| Step | Action |
-| --- | --- |
-| 1 | Open the site. |
-| 2 | Click **PlaywrightPractice** in the menu. |
-
-**Expected result:** The URL path is `p/playwrightpractice.html`. On iPhone, Blogger may add `?m=1`. The page title is **PlaywrightPractice**.
-
-### Test 20: Click Primary Action button
+### Test 10: Click Primary Action button
 
 | Step | Action |
 | --- | --- |
@@ -94,7 +85,7 @@ Each test starts by opening the site and clicking **PlaywrightPractice** in the 
 
 **Expected result:** Before the click, **Primary Action** is visible and enabled. The click completes.
 
-### Test 30: Hover over the Toggle Button
+### Test 20: Hover over the Toggle Button
 
 | Step | Action |
 | --- | --- |
@@ -103,7 +94,7 @@ Each test starts by opening the site and clicking **PlaywrightPractice** in the 
 
 **Expected result:** Before the hover, **Toggle Button** is visible and enabled. After the hover, its background color is gray (`rgb(128, 128, 128)`).
 
-### Test 40: Drag and drop an element into the target zone
+### Test 30: Drag and drop an element into the target zone
 
 | Step | Action |
 | --- | --- |
@@ -113,7 +104,7 @@ Each test starts by opening the site and clicking **PlaywrightPractice** in the 
 
 **Expected result:** The drop zone text changes to **Dropped!**.
 
-### Test 50: Select a random item from the Scrolling DropDown
+### Test 40: Select a random item from the Scrolling DropDown
 
 | Step | Action |
 | --- | --- |
