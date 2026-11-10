@@ -15,11 +15,11 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-   "engines": {
+  "engines": {
     "node": ">=20"
   },
   "devDependencies": {
-    "@playwright/test": "^1.63.0",
+    "@playwright/test": "^1.65.0",
     "@types/node": "^26.5.1"
   }
 }
